@@ -6,6 +6,7 @@ This project aims to build **an emotion-based music recommendation system** that
 We utilize the [DREAMER dataset](https://ieeexplore.ieee.org/document/7887697) to analyze users' emotional states. DREAMER is a widely-used dataset in **affective computing and brain-computer interface (BCI) research**. It provides EEG recordings collected while participants watched emotion-eliciting video clips, along with their self-assessed valence, arousal, and dominance scores.
 
 For the music recommendation component, we adopt the [DEAM dataset](https://cvml.unige.ch/databases/DEAM/) (Database for Emotional Analysis of Music), which contains 2000 music excerpts annotated with dynamic valence and arousal values. DEAM is commonly used for music emotion recognition and regression tasks.
+
 ![image](https://github.com/user-attachments/assets/da34875c-49fb-4d90-ada3-10c5c51e7f94)
 
 
