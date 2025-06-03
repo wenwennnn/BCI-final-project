@@ -69,6 +69,14 @@ This step includes:
 
 ## Validation
 
+Our system was validated using the ground truth valence and arousal labels provided by the **DREAMER EEG dataset**.
+
+## Classification Models
+
+## Music Recommendation
+
+The music recommendation system is based on regression-style continuous emotion predictions. Since there is no ground truth for the "correct" song, conventional classification metrics (accuracy, F1) are not applicable. Therefore, this component is not quantitatively evaluated in this report but remains demonstrative of the BCI system's practical use.
+
 ## Usage
 
 ## References
