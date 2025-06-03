@@ -35,3 +35,5 @@ The predicted emotion values are matched with the DEAM music database through re
 ## Validation
 
 ## Usage
+
+## References
