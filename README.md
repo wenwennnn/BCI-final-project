@@ -119,3 +119,5 @@ This study evaluates the performance of three different models for EEG-based emo
 
 
 ## References
+[DEAP dataset](https://www.eecs.qmul.ac.uk/mmv/datasets/deap/)
+[SEED dataset](https://bcmi.sjtu.edu.cn/home/seed/)
