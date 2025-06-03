@@ -32,6 +32,40 @@ The predicted emotion values are matched with the DEAM music database through re
 ## Model Framework
 ![image](https://github.com/user-attachments/assets/ef718d33-9a9e-43de-a8b4-240811a94a79)
 
+The architecture is composed of three major components: EEG preprocessing and feature extraction, emotion classification models, and music recommendation logic.
+
+### EEG Preprocessing & Feature Extraction
+
+The system uses the DREAMER EEG dataset as input. For each of the 18 emotion-inducing trials per subject, the following preprocessing steps are applied:
+
+1. EEG data are loaded and configured using MNE, with channels aligned to the standard 10-20 system.
+
+2. Signals are bandpass filtered (1–40 Hz), segmented into 4-second epochs, and cleaned using AutoReject to remove noisy segments.
+
+3. For each clean epoch, Power Spectral Density (PSD) is computed, and average bandpower features are extracted across five standard frequency bands: Delta, Theta, Alpha, Beta, and Gamma.
+
+4. Final features are saved as a NumPy .npz file with shape (N, 14, 5), where N is the number of valid trials. Each sample is labeled with arousal and valence scores (on a 5-class scale: 0–4).
+
+
+### Emotion Classification Models
+
+The system implements and compares three models for classifying both arousal and valence simultaneously:
+* **Simple CNN**: 
+  A lightweight convolutional neural network with one convolution block (Conv → BatchNorm → ReLU → MaxPooling). It accepts the PSD feature maps of shape 1×14×5 and outputs two sets of 5-class softmax scores (for arousal and valence respectively).
+* **Advanced CNN**: 
+  An extended architecture with multiple convolution layers, adaptive pooling, and dropout for better generalization. This model captures spatial-frequency dependencies across EEG channels and frequency bands more effectively, resulting in improved performance and training stability.
+* **Random Forest Classifier**: 
+  A traditional tree-based model used as a baseline. PSD features are flattened, and a MultiOutputClassifier wraps around a RandomForestClassifier to handle multi-label prediction. It provides interpretability and allows feature importance analysis.
+
+### Music Recommendation (Post-processing with DEAM)
+
+After predicting the affective state, the output valence-arousal vector is passed to a recommendation module. This module compares the predicted values with those of labeled songs in the DEAM music dataset (stored in two CSV files).
+> Alternatively, the ground truth valence-arousal scores provided by the DREAMER dataset can also be used for recommendation, allowing evaluation of the system’s performance under ideal label conditions.
+
+This step includes: 
+1. Cleaning the dataset by removing NaNs or missing entries.
+2. Computing the Euclidean distance between the predicted (or labeled) emotion vector and each song’s emotion label.
+3. Returning the top_n most similar songs based on smallest distance.
 
 ## Validation
 
