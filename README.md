@@ -73,15 +73,15 @@ Our system was validated using the ground truth valence and arousal labels provi
 
 ### **Classification Models**
 
-* **CNN**
-
-* **Random Forest Classifier**
+Our system was validated using the ground truth valence and arousal labels provided by the DREAMER EEG dataset. Since our emotion classification models were designed as a multi-output 5-class classifier, the evaluation was carried out using accuracy, Root Mean Square Error (RMSE), and confusion matrices.
 
 ### **Music Recommendation**
 
 The music recommendation system is based on regression-style continuous emotion predictions. Since there is no ground truth for the "correct" song, conventional classification metrics (accuracy, F1) are not applicable. Therefore, this component is not quantitatively evaluated in this report but remains demonstrative of the BCI system's practical use.
 
-### **Result**
+## Usage
+
+## Result
 
 As observed from the training loss curves, validation accuracy, RMSE plots, and confusion matrices, the overall performance of our model on the emotion classification task was not satisfactory. Although the CNN models converged during training, validation accuracy remained low (20–35%), and RMSE values above 1 indicate a noticeable gap between predicted and actual labels.
 
@@ -92,7 +92,5 @@ Possible reasons include:
 * **Subjective emotion labeling**: The perceived valence/arousal of each video may vary per subject, adding noise to ground truth labels.
 * **Class imbalance**: Certain emotion classes (e.g., 3 or 4) dominate the dataset, biasing the model to predict mid-range values and neglect extremes.
 
-
-## Usage
 
 ## References
