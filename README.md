@@ -73,9 +73,13 @@ Our system was validated using the ground truth valence and arousal labels provi
 
 ### **Classification Models**
 
-### **CNN**
+* **CNN**
 
-### **Random Forest Classifier**
+* **Random Forest Classifier**
+
+### **Music Recommendation**
+
+The music recommendation system is based on regression-style continuous emotion predictions. Since there is no ground truth for the "correct" song, conventional classification metrics (accuracy, F1) are not applicable. Therefore, this component is not quantitatively evaluated in this report but remains demonstrative of the BCI system's practical use.
 
 ### **Result**
 
@@ -88,9 +92,6 @@ Possible reasons include:
 * **Subjective emotion labeling**: The perceived valence/arousal of each video may vary per subject, adding noise to ground truth labels.
 * **Class imbalance**: Certain emotion classes (e.g., 3 or 4) dominate the dataset, biasing the model to predict mid-range values and neglect extremes.
 
-## Music Recommendation
-
-The music recommendation system is based on regression-style continuous emotion predictions. Since there is no ground truth for the "correct" song, conventional classification metrics (accuracy, F1) are not applicable. Therefore, this component is not quantitatively evaluated in this report but remains demonstrative of the BCI system's practical use.
 
 ## Usage
 
