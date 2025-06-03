@@ -71,7 +71,22 @@ This step includes:
 
 Our system was validated using the ground truth valence and arousal labels provided by the **DREAMER EEG dataset**.
 
-## Classification Models
+### **Classification Models**
+
+### **CNN**
+
+### **Random Forest Classifier**
+
+### **Result**
+
+As observed from the training loss curves, validation accuracy, RMSE plots, and confusion matrices, the overall performance of our model on the emotion classification task was not satisfactory. Although the CNN models converged during training, validation accuracy remained low (20–35%), and RMSE values above 1 indicate a noticeable gap between predicted and actual labels.
+
+Possible reasons include:
+
+* Insufficient data size: The DREAMER dataset includes only 23 subjects and 18 trials per subject, which is limited for deep learning and prone to overfitting.
+* High individual variability in EEG signals: EEG data is highly subject-dependent, making generalization difficult across individuals.
+* Subjective emotion labeling: The perceived valence/arousal of each video may vary per subject, adding noise to ground truth labels.
+* Class imbalance: Certain emotion classes (e.g., 3 or 4) dominate the dataset, biasing the model to predict mid-range values and neglect extremes.
 
 ## Music Recommendation
 
