@@ -81,10 +81,37 @@ The music recommendation system is based on regression-style continuous emotion 
 
 ## Result
 
-As observed from the training loss curves, validation accuracy, RMSE plots, and confusion matrices, the overall performance of our model on the emotion classification task was not satisfactory. Although the CNN models converged during training, validation accuracy remained low (20–35%), and RMSE values above 1 indicate a noticeable gap between predicted and actual labels.
+This study evaluates the performance of three different models for EEG-based emotion classification: a simple CNN, a Random Forest (RF) classifier, and an advanced CNN architecture. The results and analysis are summarized as follows:
 
-Possible reasons include:
+### Simple CNN Model
+![image](https://github.com/user-attachments/assets/dd2b9848-0cdc-45c4-9fae-30a94bb4e1aa)
 
+* Training loss quickly converged to near zero within the first few hundred epochs, indicating that the model effectively fit the training data.
+* Validation accuracy fluctuated between 20% and 35% for both arousal and valence, showing that the model struggled to generalize.
+* This may be attributed to the limited amount of training data, which caused the model to reduce loss but fail to learn sufficiently representative features for accurate prediction.
+
+### Random Forest Model
+![image](https://github.com/user-attachments/assets/7631ee1b-69ca-489c-a45d-fba5e9986972)
+![image](https://github.com/user-attachments/assets/df474d58-8747-4136-ae29-777b16f5d0dd)
+
+* The Random Forest model was trained on flattened PSD features using a traditional machine learning approach.
+* Regression results (Figure 1):
+  - Arousal RMSE: 1.07
+  - Valence RMSE: 1.13
+  - Predictions were mostly centered around the average score (~3), suggesting the model had difficulty capturing extreme emotional values. The distribution was compressed toward the center.
+* Confusion matrix analysis (Figure 2):
+  - Arousal accuracy: 19.28%
+  - Valence accuracy: 36.14%
+  - While the model performed slightly better on valence than arousal, overall classification performance remained weak, indicating that the PSD features might lack strong emotional discriminative power.\
+
+
+### Advanced CNN Model
+![image](https://github.com/user-attachments/assets/22147e06-36bb-4527-95a5-a32f5f769529)
+* The deeper CNN architecture exhibited a smoother and more stable training loss curve, demonstrating improved training dynamics.
+* However, validation accuracy remained in the 20–35% range, similar to the simple CNN model.
+* Despite its increased complexity, the model's performance showed only marginal improvement. This may be due to insufficient data, limited signal clarity in EEG, and high inter-subject variability in brain responses.
+
+### Summary
 * **Insufficient data size**: The DREAMER dataset includes only 23 subjects and 18 trials per subject, which is limited for deep learning and prone to overfitting.
 * **High individual variability in EEG signals**: EEG data is highly subject-dependent, making generalization difficult across individuals.
 * **Subjective emotion labeling**: The perceived valence/arousal of each video may vary per subject, adding noise to ground truth labels.
