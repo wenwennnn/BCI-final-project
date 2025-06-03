@@ -118,7 +118,7 @@ This study evaluates the performance of three different models for EEG-based emo
 * **Class imbalance**: Certain emotion classes (e.g., 3 or 4) dominate the dataset, biasing the model to predict mid-range values and neglect extremes.
 
 ### Summary
-This study utilized the DREAMER dataset for EEG-based emotion classification. Compared to studies using larger datasets, our models achieved relatively lower classification accuracy (literature typically reports ~60–75%). However, many of those studies rely heavily on complex data augmentation, deep temporal models (e.g., LSTM, CNN-LSTM), or subject-independent generalization, often requiring much more training data and computation.
+This study utilized the DREAMER dataset for EEG-based emotion classification. Compared to [studies using larger datasets](https://www.frontiersin.org/files/Articles/1289816/fpsyg-14-1289816-HTML/image_m/fpsyg-14-1289816-t001.jpg), our models achieved relatively lower classification accuracy (literature typically reports ~60–75%). However, many of those studies rely heavily on complex data augmentation, deep temporal models (e.g., LSTM, CNN-LSTM), or subject-independent generalization, often requiring much more training data and computation.
 
 In contrast, our goal was to build a simplified and modular pipeline for fast experimentation and practical deployment. Notably, while large models often perform well in dependent settings (same-subject training/testing), many lack results in independent settings (cross-subject evaluation), indicating that emotion recognition in BCI remains an open and evolving challenge.
 
