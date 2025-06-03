@@ -69,8 +69,6 @@ This step includes:
 
 ## Validation
 
-Our system was validated using the ground truth valence and arousal labels provided by the **DREAMER EEG dataset**.
-
 ### **Classification Models**
 
 Our system was validated using the ground truth valence and arousal labels provided by the DREAMER EEG dataset. Since our emotion classification models were designed as a multi-output 5-class classifier, the evaluation was carried out using accuracy, Root Mean Square Error (RMSE), and confusion matrices.
