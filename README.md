@@ -117,7 +117,23 @@ This study evaluates the performance of three different models for EEG-based emo
 * **Subjective emotion labeling**: The perceived valence/arousal of each video may vary per subject, adding noise to ground truth labels.
 * **Class imbalance**: Certain emotion classes (e.g., 3 or 4) dominate the dataset, biasing the model to predict mid-range values and neglect extremes.
 
+### Summary
+This study utilized the DREAMER dataset for EEG-based emotion classification. Compared to studies using larger datasets, our models achieved relatively lower classification accuracy (literature typically reports ~60–75%). However, many of those studies rely heavily on complex data augmentation, deep temporal models (e.g., LSTM, CNN-LSTM), or subject-independent generalization, often requiring much more training data and computation.
+
+In contrast, our goal was to build a simplified and modular pipeline for fast experimentation and practical deployment. Notably, while large models often perform well in dependent settings (same-subject training/testing), many lack results in independent settings (cross-subject evaluation), indicating that emotion recognition in BCI remains an open and evolving challenge.
+
+Despite modest classification performance, our system demonstrates a key contribution: **Emotion-driven music recommendation based on EEG**.
+
+This part of the system can function independently of prediction models by directly utilizing the ground truth valence-arousal scores provided in the DREAMER dataset, offering a practical proof-of-concept for brain-signal-to-music systems.
+
+To our knowledge, no previous study has directly applied EEG-derived emotional states to music recommendation. While some existing approaches rely on facial expressions or voice features to infer mood and suggest songs, such methods may not reflect internal emotional states reliably and lack generalizability.
+
+By contrast, EEG offers a direct window into a user’s internal emotional landscape, enabling more authentic and personalized emotion-based recommendation. This highlights the system’s novelty and potential for future affective BCI applications.
+
+
 
 ## References
 [DEAP dataset](https://www.eecs.qmul.ac.uk/mmv/datasets/deap/)
 [SEED dataset](https://bcmi.sjtu.edu.cn/home/seed/)
+[Mini review: Challenges in EEG emotion recognition](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1289816/full)
+[Emotion-Music-Recommendation](https://github.com/aj-naik/Emotion-Music-Recommendation)
