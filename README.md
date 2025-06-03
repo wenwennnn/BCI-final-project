@@ -102,7 +102,7 @@ This study evaluates the performance of three different models for EEG-based emo
 * Confusion matrix analysis (Figure 2):
   - Arousal accuracy: 19.28%
   - Valence accuracy: 36.14%
-  - While the model performed slightly better on valence than arousal, overall classification performance remained weak, indicating that the PSD features might lack strong emotional discriminative power.\
+  - While the model performed slightly better on valence than arousal, overall classification performance remained weak, indicating that the PSD features might lack strong emotional discriminative power.
 
 
 ### Advanced CNN Model
