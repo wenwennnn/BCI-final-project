@@ -111,7 +111,7 @@ This study evaluates the performance of three different models for EEG-based emo
 * However, validation accuracy remained in the 20–35% range, similar to the simple CNN model.
 * Despite its increased complexity, the model's performance showed only marginal improvement. This may be due to insufficient data, limited signal clarity in EEG, and high inter-subject variability in brain responses.
 
-### Summary
+### Possible causes
 * **Insufficient data size**: The DREAMER dataset includes only 23 subjects and 18 trials per subject, which is limited for deep learning and prone to overfitting.
 * **High individual variability in EEG signals**: EEG data is highly subject-dependent, making generalization difficult across individuals.
 * **Subjective emotion labeling**: The perceived valence/arousal of each video may vary per subject, adding noise to ground truth labels.
