@@ -78,6 +78,37 @@ Our system was validated using the ground truth valence and arousal labels provi
 The music recommendation system is based on regression-style continuous emotion predictions. Since there is no ground truth for the "correct" song, conventional classification metrics (accuracy, F1) are not applicable. Therefore, this component is not quantitatively evaluated in this report but remains demonstrative of the BCI system's practical use.
 
 ## Usage
+* Data preprocess:
+  - Download Dreamer dataset from Kaggle [DREAMER dataset](https://www.kaggle.com/datasets/phhasian0710/dreamer)
+  - run data preprocess code
+  ```
+  python data_preprocess.py
+  ```
+  - Folder structure:
+  ```
+  project\
+  │
+  ├── Dreamer\DREAMER.mat                        ← dataset
+  ├── data_preprocess.py              ← data preprocess code
+  ├── dreamer_psd_features.npz        ← training data
+  ├── train_complex_cnn.py            ← complex CNN training
+  ├── train_easy_cnn.py               ← easy CNN training
+  └── train_RF.py                     ← RF training
+  ```
+
+* Training:
+  - To run complex CNN:
+  ```
+  python train_complex_cnn.py
+  ```
+  - To run easy CNN:
+  ```
+  python train_easy_cnn.py
+  ```
+  - To run RF:
+  ```
+  python train_RF.py
+  ```
 
 ## Result
 
