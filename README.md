@@ -110,6 +110,10 @@ The music recommendation system is based on regression-style continuous emotion 
   python train_RF.py
   ```
 
+* Classification
+  - You can modified `valence`  `arousal` values in `classicication.m` to get the recommanded music
+
+
 ## Result
 
 This study evaluates the performance of three different models for EEG-based emotion classification: a simple CNN, a Random Forest (RF) classifier, and an advanced CNN architecture. The results and analysis are summarized as follows:
