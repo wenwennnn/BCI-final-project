@@ -35,6 +35,8 @@ The predicted emotion values are matched with the DEAM music database through re
 The architecture is composed of three major components: EEG preprocessing and feature extraction, emotion classification models, and music recommendation logic.
 
 ### EEG Preprocessing & Feature Extraction
+![image](https://github.com/user-attachments/assets/0e086e79-abec-49d0-bca7-438f1321ea87)
+
 
 The system uses the DREAMER EEG dataset as input. For each of the 18 emotion-inducing trials per subject, the following preprocessing steps are applied:
 
