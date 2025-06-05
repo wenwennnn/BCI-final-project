@@ -69,6 +69,11 @@ This step includes:
 2. Computing the Euclidean distance between the predicted (or labeled) emotion vector and each song’s emotion label.
 3. Returning the top_n most similar songs based on smallest distance.
 
+### IClabel
+
+![image](https://github.com/user-attachments/assets/5dea4250-8bde-45c3-b324-822b00c9cf0b)
+
+
 ## Validation
 
 ### **Classification Models**
