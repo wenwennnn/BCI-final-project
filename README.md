@@ -1,5 +1,7 @@
 # BCI-final-project
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/IL_8gCaD8WM/0.jpg)](https://www.youtube.com/watch?v=IL_8gCaD8WM)
+
 ## Introduction
 This project aims to build **an emotion-based music recommendation system** that leverages both the DREAMER and DEAM datasets to suggest music that aligns with a user's current emotional state, as inferred from EEG signals and affective ratings.
 
